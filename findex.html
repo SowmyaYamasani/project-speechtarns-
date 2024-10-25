@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Way Real-Time Translation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #startCall {
+            background-color: #007bff;
+            color: #fff;
+        }
+        #endCall {
+            background-color: #6c757d;
+            color: #fff;
+        }
+        audio {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Two-Way Real-Time Translation</h2>
+        <button id="startCall">Start Call</button>
+        <button id="endCall" disabled>End Call</button>
+        <div>
+            <h3>User A</h3>
+            <audio id="localAudio" autoplay></audio>
+        </div>
+        <div>
+            <h3>User B</h3>
+            <audio id="remoteAudio" autoplay></audio>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>

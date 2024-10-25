@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Language Translator App</title>
+</head>
+
+<body>
+    <h1 style="position:absolute; margin-top:-44%;">Speech Translation Application</h1>
+    <div class="container">
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea id="fromText" spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+                <ul class="controls">
+                    <li class="row from">
+                        <div class="icons">
+                            <ion-icon id="fromVolume" name="volume-medium-outline"></ion-icon>
+                            <ion-icon id="fromCopy" name="copy-outline"></ion-icon>
+                        </div>
+                        <select id="fromLanguage"></select>
+                    </li>
+                    <li class="exchange">
+                        <ion-icon name="swap-vertical"></ion-icon>
+                    <li class="row to">
+                        <select id="toLanguage"></select>
+                        <div class="icons">
+                            <ion-icon id="toVolume" name="volume-medium-outline"></ion-icon>
+                            <ion-icon id="toCopy" name="copy-outline"></ion-icon>
+                        </div>
+                    </li>
+                </ul>
+                <textarea id="toText" spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+            </div>
+        </div>
+        <button onclick="startSpeechRecognition()">Start Speech Input</button>
+        <button onclick="stopSpeechRecognition()">Stop Speech Input</button>
+        <button id="translate" onclick="translate()">Translate</button>
+        <button onclick="speakTranslation()">Speak Translation</button>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
